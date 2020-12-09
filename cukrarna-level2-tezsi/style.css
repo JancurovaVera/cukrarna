@@ -1,0 +1,171 @@
+/* intuitivnější box-sizing pro všechny prvky na stránce */
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+
+/*
+	Poznámky:
+	- maximální šířka obsahu uvnitř sekcí je 1100px
+	- "pruh" s obsahem obsah je vycentrovaný na stránce
+	- všechny sekce mají nahoře a dole padding 80px
+	- kromě hlavičky a patičky, které mají jen 30px
+	- nadpisy jsou fontem Playfair Display, tučně
+	- veškerý další text na stránce fontem Lora
+	- výchozí velikost textu na stránce je 18px, řádkování 1.5
+
+	Velikosti nadpisů:
+	h1 - 52px  (nadpis v horní Hero sekci s cupcakem)
+	h2 - 36px  (nadpisy v dalších sekcích)
+	h3 - 18px  (název produktu v Dnešní nabídce)
+	Nadpisy mají řádkování jen 1.25
+
+	Barvy:
+	#f195b2		růžová - tlačítka a zvýraznění
+	#d2567d		tmavá růžová - hover/aktivní tlačítka
+	#3e606b		tmavá tyrkysová - na nadpisy
+	#242424		(skoro) černá - na běžný text
+	#f0f0f0		světle šedé pozadí prostřední sekce
+	#303339		tmavé pozadí patičky
+
+*/
+
+
+body {
+	margin: 0;
+	font-family: 'Lora', serif;
+	line-height: 1.5;
+	font-size: 18px;
+	color: #242424;
+}
+
+
+.hlavicka{
+	width: 1100px;
+	display: flex;
+	justify-content: space-between;
+	margin:  30px auto;
+
+}
+.logo{
+	width: 170px;
+}
+
+ul{
+	display: flex;
+	list-style: none;
+	
+}
+
+ul a{
+	text-decoration: none;
+	color: black;
+	padding: 10px 15px;
+}
+
+#order{
+	border-radius: 20px;
+	background-color: #f195b2;
+	padding: 5px;
+}
+
+
+.main{width: 1100px;
+	padding: 80px;
+	background-image: url("images/cupcake.jpg");
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+}
+.main-text{
+	max-width: 60%;
+	color: #f0f0f0;
+}
+h1{
+font-size: 52px;
+}
+
+h2{
+	font-size: 36px;
+}
+h3{
+font-size: 18px;
+}
+p{
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.main-text p{
+	font-size: 24px;
+	font-style: italic;
+}
+
+
+.cukrarna{
+	width: 1100px;
+	padding: 80px;
+	display: flex;
+	margin: auto;
+}
+
+
+.cukrarka{
+	border-radius: 5px;
+	margin: 30px auto;
+}
+
+/*nabidka*/
+.sekce-nabidka{
+	background-color: #f0f0f0;
+	
+}
+
+.obsah-sekce {
+	width: 1100px;
+	padding: 80px;
+	margin: auto;
+}
+
+.nabidka{
+	display: flex;
+	
+}
+
+.produkt{
+	border-radius: 5px;
+	background-color: white;
+	margin-right: 30px;
+	width: 100%;
+}
+.produkt img{
+	width: 100%;
+}
+.produkt-obsah{
+	padding: 20px;
+	text-align: center;
+}
+
+/*peceni*/
+
+.peceni{
+	margin: 0 auto;
+	width: 1100px;
+	padding: 80px 0;
+	display: flex;
+}
+.peceni img{
+	margin-right: 30px;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.peceni-text{
+	margin-left: 30px;
+}
+
+footer{
+	background-color: #303334;
+	color: #f0f0f0;
+	text-align: center;
+	padding: 30px;
+}
